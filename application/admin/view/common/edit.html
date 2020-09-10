@@ -1,0 +1,140 @@
+{include file="public/_header"}
+<div class="content">
+    {include file="public/_left"}
+    <div class="right-wrap">
+        <div class="list-title-wrap">
+            <div class="list-title">
+                <h1>管理员管理 /<h3>&nbsp编辑管理员</h3></h1>
+            </div>
+        </div>
+        <div class="list2-wrap">
+            <div class="add-admin-wrap">
+                <div class="admin-list">
+                    <a href="{:url('admin/common/commonList')}" class="btn btn-sm btn-primary">
+                        <i class="glyphicon glyphicon-align-justify"></i>&nbsp;管理员列表</a>
+                </div>
+                <div class="message-table">
+                    <div class="admin-msgs">
+                        <h4>编辑管理员</h4>
+                    </div>
+                </div>
+                <form class="form-horizontal add-form" onchange="isEdit()">
+                    <div class="form-group add-item">
+                        <label for="nickname" class="col-sm-2 control-label">用户名:</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="nickname" name="nickname" placeholder="用户名" value="{$commonInfo.nickname}" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group add-item">
+                        <label for="password" class="col-sm-2 control-label">原密码:</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="password" name="password" placeholder="原密码" value="{$commonInfo.password}" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group add-item">
+                        <label for="newPassword" class="col-sm-2 control-label">新密码:</label>
+                        <div class="col-sm-7">
+                            <input type="password" class="form-control" id="newPassword" name="newPassword" placeholder="新密码">
+                        </div>
+                    </div>
+                    <div class="form-group add-item">
+                        <label for="username" class="col-sm-2 control-label">姓名:</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="username" placeholder="姓名" name="username" value="{$commonInfo.username}">
+                        </div>
+                    </div>
+                    <div class="form-group add-item">
+                        <label for="department" class="col-sm-2 control-label">科室:</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="department" placeholder="科室" name="department" value="{$commonInfo.dep}">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="button" class="btn btn-primary" id="keep">保存</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>>
+</div>
+<!--header结束-->
+
+<!--js文件开始-->
+{include file="public/_js"}
+<script>
+    $(function (){
+        //将数据提交给后台
+        //判断数据是否修改
+        //没修改不提交，前端显示假保存
+        // isEdit = function(){
+        //     let num = 0
+        //     $('.add-form').change(function (){
+        //         ++num
+        //         // console.log(num)
+        //     })
+        //     // if (num != 0){//from表单改变了
+        //     //     return false
+        //     // }else{
+        //     //     //from被修改过，但不知道是否修改了数据：如修改数据后又改回原值
+        //     //     // let data = $('form').serialize()
+        //     //     // console.log(data)
+        //     // }
+        //     alert(num)
+        //
+        // }
+        var bool = false
+        isEdit = function (){
+             bool = true
+        }
+        change = function (){
+            if (!bool){//form表单没有改变，直接将数据提交到后台
+                console.log(bool)
+            }else{
+                //表单改变。但数据不一定改变，比对数据是否改变
+                console.log(bool)
+
+            }
+        }
+        $('#keep').click(function (){
+            // 判断数据是否改变
+            // let data = $('form').serialize()
+            change()
+            // console.log(bool)
+            // $.ajax({
+            //     url:"{:url('admin/common/edit')}",
+            //     type:'POST',
+            //     dataType:'json',
+            //     // 将表单内容序列化成一个字符串。
+            //     data:$('form').serialize(),
+            //     success:function (data) {
+            //         console.log(data)
+            //         if(data.code == 1){
+            //             layer.msg(data.msg,{
+            //                 icon:6,
+            //                 time:2000
+            //             },function () {
+            //                 // location.href = data.url
+            //             })
+            //         } else {
+            //             layer.open({
+            //                 title:'保存失败',
+            //                 content:data.msg,
+            //                 icon:5,
+            //                 anim:6
+            //             })
+            //             console.log('保存失败！')
+            //         }
+            //     }
+            // })
+        })
+
+
+    })
+</script>
+</body>
+<!--  /Body -->
+</html>

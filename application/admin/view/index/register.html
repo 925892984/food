@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/lib/normalize.css">
+    <link rel="stylesheet" href="/static/admin/CSS/index/forget.css">
+    <link rel="stylesheet" href="/static/lib/layui/css/layui.css">
+</head>
+<body>
+<div class="container">
+    <div class="login-box">
+        <div class="logo-title-box">
+            <div class="logo-wrap">
+                <img src="/static/admin/status/imgs/logo.jpg" alt="logo" class="sys-logo">
+            </div>
+            <div class="title-wrap">
+                <span class="sys-title">用餐系统后台管理</span>
+            </div>
+        </div>
+        <div class="forget-title-wrap">
+            <span class="forget-title"></span>
+        </div>
+        <div class="form-wrap">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <div class="phone-wrap">
+                        <input type="email" class="form-control phone-number" name="email" placeholder="邮箱" id="email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="captcha-wrap">
+                        <input type="text" class="captcha-code" name="code" placeholder="输入验证码">
+                        <button type="button" id="getyzm" class="btn btn-default captcha-btn" name="captcha_code" onclick="getCode(document.getElementById('email').value)"> 发送验证码</button>
+                    </div>
+                </div>
+<!--                <div class="form-group">-->
+<!--                    <div class="userName-wrap">-->
+<!--                        <input type="text" class="form-control" name="username" placeholder="用户名">-->
+<!--                    </div>-->
+<!--                </div>-->
+                <div class="form-group">
+                    <div class="password-wrap">
+                        <input type="password" class="form-control" name="password" placeholder="6-12位密码,区分大小写">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="password-wrap">
+                        <input type="password" class="form-control" name="repassword" placeholder="确认密码">
+                    </div>
+                </div>
+                <div class="form-group btn-box">
+                    <div class="login-btn-wrap">
+                        <button type="button" class="btn btn-primary login-btn" id="register">登录</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="user-handle-wrap">
+                        <div class="forget-wrap">
+                            <a href="" class="forget">忘记密码？</a>
+                        </div>
+                        <div class="register-wrap">
+                            <a href="" class="register">注册</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script src="/static/lib/layui/layui.all.js"></script>
+<script>
+    $(function (){
+        getCode = function(email){
+            console.log(email)
+            $.ajax({
+                type : "post",
+                url:"{:url('admin/index/getSms')}",
+                data : JSON.stringify({'email':email,'type':'register'}),
+                dataType : "json",
+                success:function(data){
+                    console.log(data)
+                    var bools = true
+                    if (data.code == 1){ //验证码发送成功
+                        layer.msg(data.msg,{
+                            icon:6,
+                            time:2000
+                        })
+                    } else {
+                        bools = false
+                        console.log('注册失败！')
+                    }
+                    if(!bools){
+                        //验证码发送失败
+                        layer.open({
+                            title:'验证码发送失败！',
+                            content:data.msg,
+                            icon:5,
+                            anim:6
+                        })
+                    }else{
+                        showtime(60);
+                        console.log(data.msg);
+                    }
+                }
+            })
+        }
+        //显示时间
+        var showtime = function(t){
+            $("#getyzm").attr('disabled',true);
+            for(let i=1;i<=t;i++){
+                window.setTimeout(updatetime, i * 1000,i,t);
+            }
+        }
+        //更新时间
+        var updatetime = function(num,t) {
+            if (num == t) {
+                $("#getyzm").attr('disabled', false);
+                $("#getyzm").text("重新发送");
+            } else {
+                var remaintime = t - num;
+                $("#getyzm").text(remaintime + " 秒后重新发送");
+            }
+        }
+
+
+        $('#register').click(function (){
+            $.ajax({
+                url:"{:url('admin/index/register')}",
+                type:'POST',
+                dataType:'json',
+                // 将表单内容序列化成一个字符串。
+                data:$('form').serialize(),
+                success:function (data) {
+                    console.log(data)
+                    if(data.code == 1){
+                        layer.msg(data.msg,{
+                            icon:6,
+                            time:2000
+                        },function () {
+                            location.href = data.url
+                        })
+                    } else {
+                        layer.open({
+                            title:'注册失败！',
+                            content:data.msg,
+                            icon:5,
+                            anim:6
+                        })
+                        console.log('注册失败！')
+                    }
+                }
+            })
+        });
+
+    });
+</script>
+</body>
+</html>

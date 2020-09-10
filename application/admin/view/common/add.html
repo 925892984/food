@@ -1,0 +1,102 @@
+{include file="public/_header"}
+    <div class="content">
+{include file="public/_left"}
+        <div class="right-wrap">
+            <div class="list-title-wrap">
+                <div class="list-title">
+                    <h1>管理员管理 /<h3>&nbsp添加管理员</h3></h1>
+                </div>
+            </div>
+            <div class="list2-wrap">
+                <div class="add-admin-wrap">
+                    <div class="admin-list">
+                        <a href="{:url('admin/common/commonList')}" class="btn btn-sm btn-primary">
+                            <i class="glyphicon glyphicon-align-justify"></i>&nbsp;管理员列表</a>
+                    </div>
+                    <div class="message-table">
+                        <div class="admin-msgs">
+                            <h4>添加管理员</h4>
+                        </div>
+                    </div>
+                    <form class="form-horizontal add-form">
+                        <div class="form-group add-item">
+                            <label for="nickname" class="col-sm-2 control-label">用户名:</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" name="nickname" id="nickname" placeholder="用户名">
+                            </div>
+                        </div>
+                        <div class="form-group add-item">
+                            <label for="password" class="col-sm-2 control-label">密码:</label>
+                            <div class="col-sm-7">
+                                <input type="password" class="form-control" name="password" id="password" placeholder="密码">
+                            </div>
+                        </div>
+                        <div class="form-group add-item">
+                            <label for="repassword" class="col-sm-2 control-label">确认密码:</label>
+                            <div class="col-sm-7">
+                                <input type="password" class="form-control" name="repassword" id="repassword" placeholder="确认密码">
+                            </div>
+                        </div>
+                        <div class="form-group add-item">
+                            <label for="username" class="col-sm-2 control-label">姓名:</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" name="username" id="username" placeholder="姓名">
+                            </div>
+                        </div>
+                        <div class="form-group add-item">
+                            <label for="department" class="col-sm-2 control-label">科室:</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" name="department" id="department" placeholder="科室">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="button" class="btn btn-primary" id="commonAdd">添加</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>>
+</div>
+<!--header结束-->
+
+<!--js文件开始-->
+{include file="public/_js"}
+<script>
+    $(function (){
+        $('#commonAdd').click(function (){
+            $.ajax({
+                url:"{:url('admin/common/add')}",
+                type:'POST',
+                dataType:'json',
+                // 将表单内容序列化成一个字符串。
+                data:$('form').serialize(),
+                success:function (data) {
+                    console.log(data)
+                    if(data.code == 1){
+                        layer.msg(data.msg,{
+                            icon:6,
+                            time:2000
+                        },function () {
+                            location.href = data.url
+                        })
+                    } else {
+                        layer.open({
+                            title:'添加失败！',
+                            content:data.msg,
+                            icon:5,
+                            anim:6
+                        })
+                        console.log('注册失败！')
+                    }
+                }
+            })
+            return false
+        })
+    })
+</script>
+</body>
+<!--  /Body -->
+</html>

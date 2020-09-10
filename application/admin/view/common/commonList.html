@@ -1,0 +1,62 @@
+{include file="public/_header"}
+<div class="content">
+    {include file="public/_left"}
+    <div class="right-wrap">
+        <div class="list-title-wrap">
+            <div class="list-title">
+                <h1>管理员管理 /<h3>&nbsp管理员列表</h3></h1>
+            </div>
+        </div>
+        <div class="list2-wrap">
+            <div class="add-admin-wrap">
+                <div class="admin-list">
+                    <a href="{:url('admin/common/add')}" class="btn btn-sm btn-primary">
+                        <i class="glyphicon glyphicon-plus"></i>&nbsp;管理员添加</a>
+                </div>
+            </div>
+            <div class="message-table">
+                <div class="admin-msg">
+                    <h4>账户信息</h4>
+                </div>
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>用户名</th>
+                        <th>姓名</th>
+                        <th>科室</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {volist name="commonList" id="vo"}
+                    <tr>
+                        <td>{$vo.id}</td>
+                        <td>{$vo.username}</td>
+                        <td>康复科</td>
+                        <td>{if $vo.status == 1}正常{else /}禁用{/if}</td>
+                        <td>
+                            <a href="{:url('admin/common/edit',['id'=>$vo.id])}">
+                                <button type="button" class="btn btn-primary">修改</button>
+                            </a>
+                            <a href="{:url('admin/common/add')}">
+                                <button type="button" class="btn btn-danger">删除</button>
+                            </a>
+                        </td>
+                    </tr>
+                    {/volist}
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>>
+</div>
+<!--header结束-->
+
+<!--js文件开始-->
+{include file="public/_js"}
+</body>
+<!--  /Body -->
+</html>

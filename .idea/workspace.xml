@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8c5801e5-645b-4916-95e0-928f2e5f5e28" name="默认的" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/workerman/workerman" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-image" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-captcha" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-helper" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-migration" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-testing" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-worker" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-sae" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-mongo" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-angular" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-installer" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-queue" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/phpmailer/phpmailer" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1gvqiAqUH96qCXyqROyHgTlfOaZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/admin/view" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\phpstudy_pro\WWW\food\application\admin\view" />
+      <recent name="D:\phpstudy_pro\WWW\food\application\common\validate" />
+      <recent name="D:\phpstudy_pro\WWW\food\public\static\admin\CSS\admin" />
+      <recent name="D:\phpstudy_pro\WWW\food\application\admin\view\admin" />
+      <recent name="D:\phpstudy_pro\WWW\food\application\admin\view\index" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\phpstudy_pro\WWW\food\application\common\model\" />
+      <recent name="D:\phpstudy_pro\WWW\food\public\static\admin\CSS\index" />
+      <recent name="D:\phpstudy_pro\WWW\food\public\static\admin\CSS\admin" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8c5801e5-645b-4916-95e0-928f2e5f5e28" name="默认的" comment="" />
+      <created>1599005539050</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599005539050</updated>
+      <workItem from="1599005540231" duration="12771000" />
+      <workItem from="1599090988693" duration="753000" />
+      <workItem from="1599091793327" duration="5798000" />
+      <workItem from="1599114513324" duration="8515000" />
+      <workItem from="1599123564148" duration="1704000" />
+      <workItem from="1599125366301" duration="568000" />
+      <workItem from="1599173552426" duration="6403000" />
+      <workItem from="1599194219661" duration="6046000" />
+      <workItem from="1599350557826" duration="7690000" />
+      <workItem from="1599363709303" duration="2100000" />
+      <workItem from="1599372899316" duration="1866000" />
+      <workItem from="1599378460670" duration="642000" />
+      <workItem from="1599382636949" duration="2782000" />
+      <workItem from="1599436626067" duration="14154000" />
+      <workItem from="1599462508837" duration="1520000" />
+      <workItem from="1599523050373" duration="17669000" />
+      <workItem from="1599609921303" duration="7986000" />
+      <workItem from="1599632779990" duration="837000" />
+      <workItem from="1599633645621" duration="9142000" />
+      <workItem from="1599696484988" duration="2596000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="605" y="146" key="#PHP" timestamp="1599005916174">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="605" y="146" key="#PHP/0.0.1680.1010@0.0.1680.1010" timestamp="1599005916174" />
+    <state x="570" y="259" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599623659035">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="570" y="259" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1599623659035" />
+    <state x="620" y="259" key="FileChooserDialogImpl" timestamp="1599195422394">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="620" y="259" key="FileChooserDialogImpl/0.0.1680.1010@0.0.1680.1010" timestamp="1599195422394" />
+    <state x="575" y="224" key="NewPhpClassDialog" timestamp="1599633434596">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="575" y="224" key="NewPhpClassDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1599633434596" />
+    <state x="665" y="427" key="NewPhpFileDialog" timestamp="1599633444430">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="665" y="427" key="NewPhpFileDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1599633444430" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1599123381154">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1680.1010@0.0.1680.1010" timestamp="1599123381154" />
+    <state x="545" y="219" width="672" height="659" key="search.everywhere.popup" timestamp="1599639130425">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="545" y="219" width="672" height="659" key="search.everywhere.popup/0.0.1680.1010@0.0.1680.1010" timestamp="1599639130425" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599117404128" />
+  </component>
+</project>
